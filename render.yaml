@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: factcheck-server
+    runtime: node
+    region: singapore
+    plan: free
+    branch: main
+    rootDir: factcheck-app/server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGIN
+        value: "*"
+      - key: NODE_VERSION
+        value: "20"
