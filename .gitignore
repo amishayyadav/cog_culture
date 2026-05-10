@@ -1,0 +1,19 @@
+# Claude Code metadata
+.claude/
+
+# Secrets — defense in depth (per-project .gitignores also cover these)
+**/.env
+**/.env.local
+**/.env.*.local
+**/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node (in case anything escapes per-project ignores)
+**/node_modules/
